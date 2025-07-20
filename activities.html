@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EventXplorer — Activities in Coimbatore</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    body {
+         background: #f8f9fa; 
+        }
+    .navbar {
+         background-color: #d32f2f;
+         }
+    .navbar .nav-link, .navbar-brand { 
+        color: white !important;
+     }
+    .navbar .nav-link:hover { 
+        text-decoration: underline; 
+    }
+
+    .card-img-top {
+      height: 180px;
+      width: 100%;
+      object-fit: contain;
+      padding: 10px;
+      background-color: #fff;
+      border-top-left-radius: calc(0.25rem - 1px);
+      border-top-right-radius: calc(0.25rem - 1px);
+    }
+
+    .card-title {
+         font-size: 1rem; font-weight: 600; 
+        }
+    .card-text {
+         font-size: 0.9rem; color: #555; 
+        }
+    .btn-sm { 
+        font-size: 0.85rem;
+     }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="index.html">🎫 EventXplorer</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between" id="nav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="movies.html">Movies</a></li>
+          <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="plays.html">Plays</a></li>
+          <li class="nav-item"><a class="nav-link" href="sports.html">Sports</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#">Activities</a></li>
+        </ul>
+        <a class="btn btn-light btn-sm" href="bookings.html">My Bookings</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Activities -->
+  <div class="container mt-4">
+    <h3 class="mb-4">🎡 Activities in Coimbatore</h3>
+    <div class="row g-4">
+
+      <!-- Activty 1 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card shadow-sm h-100">
+          <img src="https://i.postimg.cc/SRyg6s62/image.png" class="card-img-top" alt="MGM Dizzee World">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">MGM Dizzee World</h5>
+            <p class="card-text">Theme Park | ₹699 onwards</p>
+            <button class="btn btn-danger btn-sm mt-auto">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Activity 2 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card shadow-sm h-100">
+          <img src="https://i.postimg.cc/50qJ3nrP/image.png" class="card-img-top" alt="Explore Shimla">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Explore Shimla</h5>
+            <p class="card-text">Travel & Adventure | ₹1099 onwards</p>
+            <button class="btn btn-danger btn-sm mt-auto">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Activity 3 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card shadow-sm h-100">
+          <img src="https://i.postimg.cc/Vvf8HXQz/image.png" class="card-img-top" alt="Biryani Fest">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Biryani Fest</h5>
+            <p class="card-text">Food Festival | ₹299 onwards</p>
+            <button class="btn btn-danger btn-sm mt-auto">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+      
+
+    </div>
+  </div>
+  <!-- Booking Modal -->
+<div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="modalEventTitle" aria-hidden="true">
+  <div class="modal-dialog">
+    <form class="modal-content" id="bookingForm">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalEventTitle">Book Tickets</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="name" class="form-label">Your Name</label>
+          <input type="text" class="form-control" id="name" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="mb-3">
+          <label for="tickets" class="form-label">Number of Tickets</label>
+          <input type="number" class="form-control" id="tickets" required min="1">
+        </div>
+        <div id="successMessage" class="alert alert-success d-none">Booking Successful!</div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-danger">Confirm Booking</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
